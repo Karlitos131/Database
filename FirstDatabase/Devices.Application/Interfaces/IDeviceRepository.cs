@@ -9,5 +9,11 @@ namespace Devices.Application.Interfaces
         Task CreateDeviceAsync(Device device);
         Task UpdateDeviceAsync(Device device);
         Task DeleteDeviceAsync(string id);
+        Task<Embedded> GetEmbeddedByDeviceIdAsync(string deviceId);
+        Task CreateEmbeddedAsync(Embedded embedded);
+        Task<PersonalComputer> GetPersonalComputerByDeviceIdAsync(string deviceId);
+        Task CreatePersonalComputerAsync(PersonalComputer personalComputer);
+        Task<Smartwatch> GetSmartwatchByDeviceIdAsync(string deviceId);
+        Task CreateSmartwatchAsync(Smartwatch smartwatch);
     }
 }

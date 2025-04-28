@@ -36,5 +36,35 @@ namespace Devices.Application.Services
         {
             await _deviceRepository.DeleteDeviceAsync(id);
         }
+
+        public async Task<Embedded> GetEmbeddedByDeviceIdAsync(string deviceId)
+        {
+            return await _deviceRepository.GetEmbeddedByDeviceIdAsync(deviceId);
+        }
+
+        public async Task CreateEmbeddedAsync(Embedded embedded)
+        {
+            await _deviceRepository.CreateEmbeddedAsync(embedded);
+        }
+
+        public async Task<PersonalComputer> GetPersonalComputerByDeviceIdAsync(string deviceId)
+        {
+            return await _deviceRepository.GetPersonalComputerByDeviceIdAsync(deviceId);
+        }
+
+        public async Task CreatePersonalComputerAsync(PersonalComputer personalComputer)
+        {
+            await _deviceRepository.CreatePersonalComputerAsync(personalComputer);
+        }
+
+        public async Task<Smartwatch> GetSmartwatchByDeviceIdAsync(string deviceId)
+        {
+            return await _deviceRepository.GetSmartwatchByDeviceIdAsync(deviceId);
+        }
+
+        public async Task CreateSmartwatchAsync(Smartwatch smartwatch)
+        {
+            await _deviceRepository.CreateSmartwatchAsync(smartwatch);
+        }
     }
 }
