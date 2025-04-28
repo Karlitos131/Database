@@ -63,5 +63,73 @@ namespace FirstDatabase.Controllers
             await _deviceService.DeleteDeviceAsync(id);
             return NoContent();
         }
+        [HttpGet("embedded/{deviceId}")]
+        public async Task<ActionResult<Embedded>> GetEmbeddedByDeviceId(string deviceId)
+        {
+            var embedded = await _deviceService.GetEmbeddedByDeviceIdAsync(deviceId);
+            if (embedded == null)
+            {
+                return NotFound();
+            }
+            return Ok(embedded);
+        }
+
+        [HttpPost("embedded")]
+        public async Task<ActionResult> CreateEmbedded([FromBody] Embedded embedded)
+        {
+            if (embedded == null)
+            {
+                return BadRequest("Embedded data is required.");
+            }
+
+            await _deviceService.CreateEmbeddedAsync(embedded);
+            return Created("", embedded);
+        }
+
+        [HttpGet("personalcomputer/{deviceId}")]
+        public async Task<ActionResult<PersonalComputer>> GetPersonalComputerByDeviceId(string deviceId)
+        {
+            var pc = await _deviceService.GetPersonalComputerByDeviceIdAsync(deviceId);
+            if (pc == null)
+            {
+                return NotFound();
+            }
+            return Ok(pc);
+        }
+
+        [HttpPost("personalcomputer")]
+        public async Task<ActionResult> CreatePersonalComputer([FromBody] PersonalComputer pc)
+        {
+            if (pc == null)
+            {
+                return BadRequest("Personal Computer data is required.");
+            }
+
+            await _deviceService.CreatePersonalComputerAsync(pc);
+            return Created("", pc);
+        }
+
+        [HttpGet("smartwatch/{deviceId}")]
+        public async Task<ActionResult<Smartwatch>> GetSmartwatchByDeviceId(string deviceId)
+        {
+            var smartwatch = await _deviceService.GetSmartwatchByDeviceIdAsync(deviceId);
+            if (smartwatch == null)
+            {
+                return NotFound();
+            }
+            return Ok(smartwatch);
+        }
+
+        [HttpPost("smartwatch")]
+        public async Task<ActionResult> CreateSmartwatch([FromBody] Smartwatch smartwatch)
+        {
+            if (smartwatch == null)
+            {
+                return BadRequest("Smartwatch data is required.");
+            }
+
+            await _deviceService.CreateSmartwatchAsync(smartwatch);
+            return Created("", smartwatch);
+        }
     }
 }
