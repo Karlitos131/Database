@@ -1,0 +1,12 @@
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/bin/Debug/net8.0/Devices.Domain.deps.json
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/bin/Debug/net8.0/Devices.Domain.dll
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/bin/Debug/net8.0/Devices.Domain.pdb
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/obj/Debug/net8.0/Devices.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/obj/Debug/net8.0/Devices.Domain.AssemblyInfoInputs.cache
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/obj/Debug/net8.0/Devices.Domain.AssemblyInfo.cs
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/obj/Debug/net8.0/Devices.Domain.csproj.CoreCompileInputs.cache
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/obj/Debug/net8.0/Devices.Domain.sourcelink.json
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/obj/Debug/net8.0/Devices.Domain.dll
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/obj/Debug/net8.0/refint/Devices.Domain.dll
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/obj/Debug/net8.0/Devices.Domain.pdb
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/obj/Debug/net8.0/ref/Devices.Domain.dll

@@ -1,0 +1,16 @@
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/bin/Debug/net8.0/Devices.Application.deps.json
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/bin/Debug/net8.0/Devices.Application.dll
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/bin/Debug/net8.0/Devices.Application.pdb
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/bin/Debug/net8.0/Devices.Domain.dll
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/bin/Debug/net8.0/Devices.Domain.pdb
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/obj/Debug/net8.0/Devices.Application.csproj.AssemblyReference.cache
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/obj/Debug/net8.0/Devices.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/obj/Debug/net8.0/Devices.Application.AssemblyInfoInputs.cache
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/obj/Debug/net8.0/Devices.Application.AssemblyInfo.cs
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/obj/Debug/net8.0/Devices.Application.csproj.CoreCompileInputs.cache
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/obj/Debug/net8.0/Devices.Application.sourcelink.json
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/obj/Debug/net8.0/Devices..50421DED.Up2Date
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/obj/Debug/net8.0/Devices.Application.dll
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/obj/Debug/net8.0/refint/Devices.Application.dll
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/obj/Debug/net8.0/Devices.Application.pdb
+/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/obj/Debug/net8.0/ref/Devices.Application.dll
