@@ -1,6 +1,7 @@
 using Devices.Application.Interfaces;
 using Devices.Domain.Models;
 using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace Devices.Application.Database
 {
@@ -25,7 +26,7 @@ namespace Devices.Application.Database
 
             while (await reader.ReadAsync())
             {
-                devices.Add(new Device
+                devices.Add(new GenericDevice
                 {
                     Id = reader.GetString(0),
                     Name = reader.GetString(1),
@@ -47,7 +48,7 @@ namespace Devices.Application.Database
             var reader = await command.ExecuteReaderAsync();
             if (await reader.ReadAsync())
             {
-                return new Device
+                return new GenericDevice
                 {
                     Id = reader.GetString(0),
                     Name = reader.GetString(1),
@@ -60,39 +61,98 @@ namespace Devices.Application.Database
 
         public async Task CreateDeviceAsync(Device device)
         {
+            if (string.IsNullOrWhiteSpace(device.Id))
+            {
+                device.Id = Guid.NewGuid().ToString();
+            }
+
             using var connection = new SqlConnection(_connectionString);
             await connection.OpenAsync();
 
-            var command = new SqlCommand("INSERT INTO Device (Id, Name, IsEnabled) VALUES (@Id, @Name, @IsEnabled)", connection);
+            using var transaction = connection.BeginTransaction();
+
+            var command = new SqlCommand("AddDevice", connection, transaction)
+            {
+                CommandType = System.Data.CommandType.StoredProcedure
+            };
+
             command.Parameters.AddWithValue("@Id", device.Id);
             command.Parameters.AddWithValue("@Name", device.Name);
             command.Parameters.AddWithValue("@IsEnabled", device.IsEnabled);
 
-            await command.ExecuteNonQueryAsync();
+            try
+            {
+                await command.ExecuteNonQueryAsync();
+                await transaction.CommitAsync();
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
         }
 
         public async Task UpdateDeviceAsync(Device device)
         {
             using var connection = new SqlConnection(_connectionString);
             await connection.OpenAsync();
+            using var transaction = connection.BeginTransaction();
 
-            var command = new SqlCommand("UPDATE Device SET Name = @Name, IsEnabled = @IsEnabled WHERE Id = @Id", connection);
+            var command = new SqlCommand("UpdateDevice", connection, transaction)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
             command.Parameters.AddWithValue("@Id", device.Id);
             command.Parameters.AddWithValue("@Name", device.Name);
             command.Parameters.AddWithValue("@IsEnabled", device.IsEnabled);
+            command.Parameters.AddWithValue("@RowVersion", device.RowVersion);
 
-            await command.ExecuteNonQueryAsync();
+            try
+            {
+                var rowsAffected = await command.ExecuteNonQueryAsync();
+                if (rowsAffected == 0)
+                {
+                    throw new DBConcurrencyException("Update failed due to version conflict.");
+                }
+
+                await transaction.CommitAsync();
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
         }
 
         public async Task DeleteDeviceAsync(string id)
         {
             using var connection = new SqlConnection(_connectionString);
             await connection.OpenAsync();
+            using var transaction = connection.BeginTransaction();
 
-            var command = new SqlCommand("DELETE FROM Device WHERE Id = @Id", connection);
+            var command = new SqlCommand("DeleteDevice", connection, transaction)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
             command.Parameters.AddWithValue("@Id", id);
 
-            await command.ExecuteNonQueryAsync();
+            try
+            {
+                var rowsAffected = await command.ExecuteNonQueryAsync();
+                if (rowsAffected == 0)
+                {
+                    throw new Exception("Delete failed. No rows affected.");
+                }
+
+                await transaction.CommitAsync();
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
         }
 
         public async Task<Embedded> GetEmbeddedByDeviceIdAsync(string deviceId)

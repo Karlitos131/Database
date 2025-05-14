@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VqG4G5QkBIE=",
+  "dgSpecHash": "+O+/9jzIWw8=",
   "success": true,
-  "projectFilePath": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/Devices.Domain.csproj",
+  "projectFilePath": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Domain/Devices.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

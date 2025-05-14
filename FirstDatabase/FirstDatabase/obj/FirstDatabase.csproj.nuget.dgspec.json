@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/FirstDatabase/FirstDatabase.csproj": {}
+    "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/FirstDatabase/FirstDatabase.csproj": {}
   },
   "projects": {
-    "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/Devices.Application.csproj": {
+    "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Application/Devices.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/Devices.Application.csproj",
+        "projectUniqueName": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Application/Devices.Application.csproj",
         "projectName": "Devices.Application",
-        "projectPath": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/Devices.Application.csproj",
+        "projectPath": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Application/Devices.Application.csproj",
         "packagesPath": "/Users/franciszeksztupecki/.nuget/packages/",
-        "outputPath": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/obj/",
+        "outputPath": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/franciszeksztupecki/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/Devices.Domain.csproj": {
-                "projectPath": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/Devices.Domain.csproj"
+              "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Domain/Devices.Domain.csproj": {
+                "projectPath": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Domain/Devices.Domain.csproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/Devices.Domain.csproj": {
+    "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Domain/Devices.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/Devices.Domain.csproj",
+        "projectUniqueName": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Domain/Devices.Domain.csproj",
         "projectName": "Devices.Domain",
-        "projectPath": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/Devices.Domain.csproj",
+        "projectPath": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Domain/Devices.Domain.csproj",
         "packagesPath": "/Users/franciszeksztupecki/.nuget/packages/",
-        "outputPath": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/obj/",
+        "outputPath": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/franciszeksztupecki/.nuget/NuGet/NuGet.Config"
@@ -130,14 +130,14 @@
         }
       }
     },
-    "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/FirstDatabase/FirstDatabase.csproj": {
+    "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/FirstDatabase/FirstDatabase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/FirstDatabase/FirstDatabase.csproj",
+        "projectUniqueName": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/FirstDatabase/FirstDatabase.csproj",
         "projectName": "FirstDatabase",
-        "projectPath": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/FirstDatabase/FirstDatabase.csproj",
+        "projectPath": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/FirstDatabase/FirstDatabase.csproj",
         "packagesPath": "/Users/franciszeksztupecki/.nuget/packages/",
-        "outputPath": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/FirstDatabase/obj/",
+        "outputPath": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/FirstDatabase/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/franciszeksztupecki/.nuget/NuGet/NuGet.Config"
@@ -152,11 +152,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/Devices.Application.csproj": {
-                "projectPath": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Application/Devices.Application.csproj"
+              "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Application/Devices.Application.csproj": {
+                "projectPath": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Application/Devices.Application.csproj"
               },
-              "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/Devices.Domain.csproj": {
-                "projectPath": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/Devices.Domain.csproj"
+              "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Domain/Devices.Domain.csproj": {
+                "projectPath": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Domain/Devices.Domain.csproj"
               }
             }
           }

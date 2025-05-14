@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/Devices.Domain.csproj",
+      "projectUniqueName": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Domain/Devices.Domain.csproj",
       "projectName": "Devices.Domain",
-      "projectPath": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/Devices.Domain.csproj",
+      "projectPath": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Domain/Devices.Domain.csproj",
       "packagesPath": "/Users/franciszeksztupecki/.nuget/packages/",
-      "outputPath": "/Users/franciszeksztupecki/RiderProjects/FirstDatabase/Devices.Domain/obj/",
+      "outputPath": "/Users/franciszeksztupecki/RiderProjects/Database/FirstDatabase/Devices.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/franciszeksztupecki/.nuget/NuGet/NuGet.Config"

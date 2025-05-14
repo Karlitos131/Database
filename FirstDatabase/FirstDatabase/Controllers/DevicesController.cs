@@ -131,5 +131,32 @@ namespace FirstDatabase.Controllers
             await _deviceService.CreateSmartwatchAsync(smartwatch);
             return Created("", smartwatch);
         }
+        
+        [HttpPost("import")]
+        [Consumes("text/plain")]
+        public async Task<IActionResult> ImportDevice([FromBody] string content)
+        {
+            if (string.IsNullOrWhiteSpace(content))
+                return BadRequest("Content is empty.");
+
+            var parts = content.Split(',');
+
+            if (parts.Length != 2)
+                return BadRequest("Invalid format. Expected: Name,bool");
+
+            var name = parts[0].Trim();
+            if (!bool.TryParse(parts[1].Trim(), out var isEnabled))
+                return BadRequest("Invalid boolean value.");
+
+            var device = new GenericDevice
+            {
+                Name = name,
+                IsEnabled = isEnabled
+            };
+
+            await _deviceService.CreateDeviceAsync(device);
+
+            return CreatedAtAction(nameof(GetDeviceById), new { id = device.Id }, device);
+        }
     }
 }
