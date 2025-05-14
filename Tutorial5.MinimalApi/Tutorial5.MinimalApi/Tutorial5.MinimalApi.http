@@ -1,6 +1,0 @@
-@Tutorial5.MinimalApi_HostAddress = http://localhost:5049
-
-GET {{Tutorial5.MinimalApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
